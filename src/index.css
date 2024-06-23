@@ -1,0 +1,32 @@
+/* font import */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
+
+/* tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* stylings */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+body{
+  background: #0a192f;
+}
+li{
+    cursor: pointer;
+}
+
+.content-div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+}
+
+.Toastify__toast{
+  margin: 0.5rem;
+}
