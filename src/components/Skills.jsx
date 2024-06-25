@@ -11,19 +11,20 @@ import mongo from "../assets/mongo.png";
 import node from "../assets/node.png";
 import sass from "../assets/sass.png";
 import tailwind from "../assets/tailwind.png";
+import Github from "./Github";
 
 const Skills = () => {
   return (
     <div name="skills" className="bg-[#0a192f] text-gray-300">
       {/* container */}
-      <div className=" max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full">
+      <div className=" max-w-[1000px] mx-auto flex flex-col justify-center w-full">
         <div className="px-4">
           <p className="text-4xl font-bold inline border-b-4 border-orange-500">
             Experience
           </p>
           <p className="py-4">These are the technologies I've worked with :</p>
         </div>
-        <div className="w-full grid grid-cols-2 sm:grid-cols-5 gap-4 text-center py-8 ">
+        <div className="w-full grid grid-cols-2 sm:grid-cols-5 gap-4 text-center p-4 ">
           {/* icons */}
           <div className="hover:scale-110 duration-500 flex flex-col gap-4 p-2">
             <img className="w-20 mx-auto" src={html} alt="Html icon" />
@@ -69,6 +70,12 @@ const Skills = () => {
             <img className="w-20 mx-auto" src={tailwind} alt="Tailwind icon" />
             <p>Tailwind</p>
           </div>
+        </div>
+        <div className="w-full px-4">
+          <p className="text-4xl font-bold inline border-b-4 border-orange-500">
+            Days I <span className="text-[#8892b0]">Code</span>
+          </p>
+          <Github/>
         </div>
       </div>
     </div>

@@ -24,16 +24,17 @@ const Home = () => {
           experience.
         </p>
         <div>
-          <button className="text-white border-2 px-6 py-2 flex items-center hover:bg-orange-500 hover:border-orange-500 gap-4">
-          <Link
+        <Link
               to='work'
               smooth={true}
               duration={500}
             >
-              View Work
-            </Link>
+              <button className="text-white border-2 px-6 py-2 flex items-center hover:bg-orange-500 hover:border-orange-500 gap-4">
+            View Work
             <HiArrowRight />
           </button>
+            </Link>
+          
         </div>
       </div>
     </div>
