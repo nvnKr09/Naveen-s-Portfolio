@@ -15,15 +15,15 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className="px-4 fixed w-full h-[80px] flex justify-between items-center bg-[#0a192f] text-gray-300 z-10">
+    <div className="px-8 fixed w-full h-[80px] flex justify-between items-center bg-[#0a192f] text-gray-300 z-10">
       <div id="logo">
-        <h1 className="text-xl font-semibold">PORTFOLIO</h1>
+        <h1 className="text-2xl font-semibold">PORTFOLIO</h1>
       </div>
 
       {/* menu */}
-      <ul className="hidden md:flex">
+      <ul className="hidden md:flex justify-between gap-6">
         {["Home", "About", "Skills", "Work", "Contact"].map((skill, idx) => (
-          <li key={idx} className="px-3 hover:text-[#8892b0]">
+          <li key={idx} className="hover:text-[#8892b0]">
             <Link
               to={skill.toLowerCase()}
               smooth={true}
