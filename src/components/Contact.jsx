@@ -49,13 +49,13 @@ const Contact = () => {
             Contact
           </p>
           <p className="text-gray-300 py-4">
-            Submit the form below or shoot me an email{" "}
+            Have any feedback or want to collaborate? Submit the form below or shoot me an email{" "}
             <a
               href="mailto:nvnkr09@gmail.com"
               target="_blank"
               className="text-sky-300 pb-0 border-sky-300 border-b-[1px]"
             >
-              here
+              Here
             </a>
           </p>
         </div>
@@ -89,7 +89,7 @@ const Contact = () => {
           type="submit"
           className="text-white border-2 hover:bg-orange-500 hover:border-orange-500 px-4 py-3 my-8 mx-auto flex items-center"
         >
-          Let's Collaborate
+          Submit
         </button>
       </form>
     </div>
