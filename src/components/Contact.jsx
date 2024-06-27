@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { ClipLoader } from "react-spinners";
 import { toast } from "react-toastify";
 
 const Contact = () => {
@@ -8,6 +9,7 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -16,7 +18,9 @@ const Contact = () => {
       toast.error("PLease fill all details");
       return;
     }
-
+ 
+    setLoading(true);   // disabling button and showing loader
+    
     // backend logic
     try {
       const response = await axios.post("https://portfolio-backend-t9o0.onrender.com/contact", {name, email, message});
@@ -26,10 +30,13 @@ const Contact = () => {
         toast.success("Thank you for reaching out to us");
         setUserInfo({ name: '', email: '', message: '' });
       } else {
+        console.log('something wrong')
         toast.error("Something went wrong.");
       }
     } catch (error) {
       console.log(error);
+    } finally {
+      setLoading(false);   // enabling button and hiding loader
     }
   };
 
@@ -39,8 +46,6 @@ const Contact = () => {
       className="w-full md:h-screen bg-[#0a192f] flex justify-center items-center"
     >
       <form
-        action="http://localhost:8000/contact"
-        method="POST"
         onSubmit={handleSubmit}
         className="flex flex-col max-w-[600px] w-full p-4"
       >
@@ -87,9 +92,10 @@ const Contact = () => {
         ></textarea>
         <button
           type="submit"
-          className="text-white border-2 hover:bg-orange-500 hover:border-orange-500 px-4 py-3 my-8 mx-auto flex items-center"
+          className="text-white border-2 hover:bg-orange-500 hover:border-orange-500 disabled:bg-orange-900 disabled:border-orange-900 px-4 py-2 my-8 mx-auto flex items-center justify-center gap-4"
+          disabled={loading}
         >
-          Submit
+          {loading ? (<><ClipLoader color="#fff" size={20} /> Submitting</>) : 'Submit'}
         </button>
       </form>
     </div>

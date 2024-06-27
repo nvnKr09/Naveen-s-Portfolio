@@ -24,6 +24,7 @@ const Skills = () => {
           </p>
           <p className="py-4">These are the technologies I've worked with :</p>
         </div>
+        {/* icons container */}
         <div className="w-full grid grid-cols-2 sm:grid-cols-5 gap-4 text-center p-4 ">
           {/* icons */}
           <div className="hover:scale-110 duration-500 flex flex-col gap-4 p-2">
@@ -71,7 +72,8 @@ const Skills = () => {
             <p>Tailwind</p>
           </div>
         </div>
-        <div className="w-full px-4">
+        {/* Gituhb calender container */}
+        <div className="w-full px-4 pt-8">
           <p className="text-4xl font-bold inline border-b-4 border-orange-500">
             Days I <span className="text-[#8892b0]">Code</span>
           </p>
