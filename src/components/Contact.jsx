@@ -20,23 +20,26 @@ const Contact = () => {
     }
  
     setLoading(true);   // disabling button and showing loader
+
+    setTimeout(() => {
+      setLoading(false);
+      toast.success("Thank you for reaching out to us");
+      setUserInfo({ name: '', email: '', message: '' });
+    }, 3000);
     
     // backend logic
     try {
       const response = await axios.post("https://portfolio-backend-t9o0.onrender.com/contact", {name, email, message});
       // console.log(response);
 
-      if (response.status === 201) {
-        toast.success("Thank you for reaching out to us");
-        setUserInfo({ name: '', email: '', message: '' });
-      } else {
+      if (response.status !== 201) {
         console.log('something wrong')
         toast.error("Something went wrong.");
       }
     } catch (error) {
       console.log(error);
-    } finally {
-      setLoading(false);   // enabling button and hiding loader
+    // } finally {
+    //   setLoading(false);   // enabling button and hiding loader
     }
   };
 
