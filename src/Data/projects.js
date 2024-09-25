@@ -1,6 +1,7 @@
 import imageBzaar from '../assets/Projects/image-bazar.png';
 import financely from '../assets/Projects/financely.png';
 import whiteboard from '../assets/Projects/whiteboard.png';
+import crypto_img from '../assets/Projects/crypto-tr.png';
 
 export const Projects = [
     {
@@ -12,6 +13,13 @@ export const Projects = [
     },
     {
         id:2,
+        name:"Crypto Tracker",
+        image:crypto_img,
+        githubLink:"https://github.com/nvnKr09/crypto-tracker",
+        liveLink:"https://crypto-tracker-ashen-pi.vercel.app/",
+    },
+    {
+        id:3,
         name:"Image Bzaar",
         image:imageBzaar,
         githubLink:"https://github.com/nvnKr09/image-bazar",

@@ -1,16 +1,16 @@
 import React from "react";
 
 // assets imports
-import html from "../assets/html.png";
-import css from "../assets/css.png";
-import javaScript from "../assets/javascript.png";
-import github from "../assets/github.png";
-import react from "../assets/react.png";
-import firebase from "../assets/firebase.png";
-import mongo from "../assets/mongo.png";
-import node from "../assets/node.png";
-import sass from "../assets/sass.png";
-import tailwind from "../assets/tailwind.png";
+import html from "../assets/Icons/html.png";
+import css from "../assets/Icons/css.png";
+import javaScript from "../assets/Icons/javascript.png";
+import github from "../assets/Icons/github.png";
+import react from "../assets/Icons/react.png";
+import firebase from "../assets/Icons/firebase.png";
+import mongo from "../assets/Icons/mongo.png";
+import node from "../assets/Icons/node.png";
+import sass from "../assets/Icons/sass.png";
+import tailwind from "../assets/Icons/tailwind.png";
 import Github from "./Github";
 
 const Skills = () => {

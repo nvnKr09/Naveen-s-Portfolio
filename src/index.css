@@ -7,26 +7,27 @@
 @tailwind utilities;
 
 /* stylings */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
 }
-body{
+body {
   background: #0a192f;
 }
-li{
-    cursor: pointer;
+li {
+  cursor: pointer;
 }
 
 .content-div {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-width: 200px;
+  aspect-ratio: 16/9;
 }
 
-.Toastify__toast{
+.Toastify__toast {
   margin: 0.5rem;
 }

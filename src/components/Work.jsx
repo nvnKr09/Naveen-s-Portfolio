@@ -14,19 +14,19 @@ const Work = () => {
         </div>
 
         {/* container for projects */}
-        <div className="p-4 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="p-4 grid justify-items-center sm:grid-cols-2 gap-10">
 
           {/* grid items */}
           {Projects.map(({id,name, image, githubLink, liveLink}) => (
             <div
               key={id}
               style={{ backgroundImage: `url(${image})` }}
-              className="shadow-lg shadow-[#040c16] group container rounded-lg 
+              className="aspect-[1] shadow-lg shadow-[#040c16] group container rounded-lg 
               flex justify-center text-center items-center mx-auto content-div "
             >
               {/* Hover effect for images */}
               <div className="opacity-0 hover:opacity-100 hover:bg-[#000000be] h-full w-full flex flex-col justify-center items-center rounded-lg">
-                <span className="text-2xl font bold text-gray-300 tracking-wider ">
+                <span className="text-2xl font-[500] text-white tracking-wider ">
                   {name}
                 </span>
                 <div className="pt-2 text-center ">
